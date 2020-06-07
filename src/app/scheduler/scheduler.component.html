@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col">
+        <h3 class="text-center">Schedules</h3>
+        <div class="row">
+            <div class="col-md-1">
+                SNo
+            </div>
+            <div class="col-md-5">
+                Name
+            </div>
+            <div class="col-md-6">
+                Schedule
+            </div>
+        </div>
+        <div class="row" *ngFor="let task of tasks.data; let i = index">
+            <div class="col-md-1">
+                {{i+1}}
+            </div>
+            <div class="col-md-5">
+                {{task.name}}
+            </div>
+            <div class="col-md-6">
+                {{task.time}}
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h3 class="text-center">Schedule</h3>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Task Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="name">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Seconds</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="seconds">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Minutes</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="minutes">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Hours</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="hours">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Day of Month</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="dayOfMonth">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Month</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="month">
+        </div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Day of Week</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" [(ngModel)]="dayOfWeek">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="createTask()">Create Task</button>
+    </div>
+</div>

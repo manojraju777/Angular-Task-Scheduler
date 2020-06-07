@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <h3 class="text-center">Schedule your tasks as below</h3>
+    <p>Scheduler contains 6 stars as the below chart</p>
+    <pre>
+                # ┌────────────── second (optional)
+                # │ ┌──────────── minute
+                # │ │ ┌────────── hour
+                # │ │ │ ┌──────── day of month
+                # │ │ │ │ ┌────── month
+                # │ │ │ │ │ ┌──── day of week
+                # │ │ │ │ │ │
+                # │ │ │ │ │ │
+                # * * * * * *
+            </pre>
+    <p>First star represents the seconds, second is for minutes, third for hours, fourth for day of month, fifth
+        for month and 6th for day of week</p>
+    <p>This means you can setup a schedule for literally any time. Maybe once a year? Or every Tuesday at 8am in
+        January and July. There's really no limitation</p>
+    <h4>Samples</h4>
+    <p>To run a scheduler everyday at 18:00, Set it as <b>0 18 * * *</b></p>
+    <p>To run a scheduler everyday at 04:05, Set it as <b>5 4 * * *</b></p>
+    <p>To run a scuduler on every friday at 07:00, Set it as <b>0 7 * * 5</b></p>
+    <app-scheduler></app-scheduler>
+</div>
